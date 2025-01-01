@@ -1,0 +1,26 @@
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+// bg styles
+const bgPrimaryColor = Colors.black;
+const bgSecondaryColor = Color.fromARGB(255, 148, 148, 148);
+
+// text styles
+const textPrimaryColor = Colors.white;
+const textSecondaryColor = Colors.black;
+
+// icon styles
+const iconPrimaryColor = Colors.amber;
+const iconSecondaryColor = Colors.white;
+
+// font styles
+final textTitle = GoogleFonts.kanit(
+  fontSize: 20,
+  fontWeight: FontWeight.w600,
+  color: textPrimaryColor,
+);
+final textSubTitle = GoogleFonts.kanit(
+  fontSize: 14,
+  fontWeight: FontWeight.w400,
+  color: textPrimaryColor,
+);
