@@ -17,10 +17,16 @@ const iconSecondaryColor = Colors.white;
 final textTitle = GoogleFonts.kanit(
   fontSize: 20,
   fontWeight: FontWeight.w600,
-  color: textPrimaryColor,
+  color: textSecondaryColor,
 );
 final textSubTitle = GoogleFonts.kanit(
   fontSize: 14,
   fontWeight: FontWeight.w400,
+  color: Colors.black45,
+);
+
+final textBtn = GoogleFonts.kanit(
+  fontSize: 18,
+  fontWeight: FontWeight.w800,
   color: textPrimaryColor,
 );
