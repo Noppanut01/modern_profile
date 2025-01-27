@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:modern_profile/screens/favorite_screen.dart';
+import 'package:modern_profile/screens/home_screen.dart';
+import 'package:modern_profile/screens/setting_screen.dart';
 import '/constant/constant.dart';
 import 'edit_screen.dart';
 
@@ -20,34 +23,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
   }
 
   final List<Widget> _pages = [
-    Text('Home'),
-    Text('Favorite'),
-    Text('Setting'),
+    HomeScreen(),
+    FavoriteScreen(),
+    SettingScreen(),
     EditProfileScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.amber,
-        title: Text(
-          'Edit Profile',
-          style: textTitle,
-        ),
-        // centerTitle: true,
-        leading: Icon(
-          Icons.arrow_back_ios,
-          size: 20,
-          // color: iconPrimaryColor,
-        ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.exit_to_app),
-          ),
-        ],
-      ),
       body: _pages[_selectedItem],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedItem,
