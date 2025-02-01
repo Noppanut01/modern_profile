@@ -16,59 +16,66 @@ class EditProfileScreen extends StatelessWidget {
         title: 'Edit Profile',
         leadIcons: Icons.arrow_back_ios,
         actionIcons: Icons.exit_to_app,
+        appBarColor: Colors.blue,
       ),
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Column(
-          children: [
-            SizedBox(height: 30),
-            ProfileImage(),
-            SizedBox(height: 20),
-            Text(
-              'Noppanut Maiprot',
-              style: textTitle,
-            ),
-            SizedBox(height: 15),
-            Text('noppanut.jang2547@gmail.com', style: textSubTitle),
-            SizedBox(height: 15),
-            Container(
-              width: 150,
-              height: 40,
-              decoration: BoxDecoration(
-                color: Colors.amber,
-                borderRadius: BorderRadius.circular(25.0),
+      body: Container(
+        height: double.infinity,
+        decoration: BoxDecoration(
+          color: Colors.white,
+        ),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            children: [
+              SizedBox(height: 30),
+              ProfileImage(),
+              SizedBox(height: 20),
+              Text(
+                'Noppanut Maiprot',
+                style: textTitle,
               ),
-              child: Center(
-                child: Text('Edit Profile', style: textBtn),
+              SizedBox(height: 15),
+              Text('noppanut.jang2547@gmail.com', style: textSubTitle),
+              SizedBox(height: 15),
+              Container(
+                width: 150,
+                height: 40,
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.circular(25.0),
+                ),
+                child: Center(
+                  child: Text('Edit Profile', style: textBtn),
+                ),
               ),
-            ),
-            // Profile menu
-            SizedBox(height: 30),
-            ProfileMenu(
-              title: 'Setting',
-              icons: Icons.settings,
-            ),
-            SizedBox(height: 15),
-            ProfileMenu(
-              title: 'Billing details',
-              icons: Icons.wallet,
-            ),
-            SizedBox(height: 15),
-            ProfileMenu(
-              title: 'User management',
-              icons: Icons.person,
-            ),
-            SizedBox(height: 15),
-            ProfileMenu(
-              title: 'Favorite',
-              icons: Icons.star,
-            ),
-            SizedBox(height: 15),
-            ProfileMenu(
-              title: 'Logout',
-              icons: Icons.logout,
-            ),
-          ],
+              // Profile menu
+              SizedBox(height: 30),
+              ProfileMenu(
+                title: 'Setting',
+                icons: Icons.settings,
+              ),
+              SizedBox(height: 15),
+              ProfileMenu(
+                title: 'Billing details',
+                icons: Icons.wallet,
+              ),
+              SizedBox(height: 15),
+              ProfileMenu(
+                title: 'User management',
+                icons: Icons.person,
+              ),
+              SizedBox(height: 15),
+              ProfileMenu(
+                title: 'Favorite',
+                icons: Icons.star,
+              ),
+              SizedBox(height: 15),
+              ProfileMenu(
+                title: 'Logout',
+                icons: Icons.logout,
+              ),
+            ],
+          ),
         ),
       ),
     );

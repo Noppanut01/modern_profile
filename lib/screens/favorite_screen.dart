@@ -8,9 +8,21 @@ class FavoriteScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
-          title: "Favorite",
-          leadIcons: Icons.arrow_back_ios,
-          actionIcons: Icons.star),
+        title: "Favorite",
+        leadIcons: Icons.arrow_back_ios,
+        actionIcons: Icons.star,
+        appBarColor: Colors.white,
+      ),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: BoxDecoration(
+          color: Colors.white,
+        ),
+        child: Center(
+          child: Text('Favorite Screen'),
+        ),
+      ),
     );
   }
 }

@@ -37,6 +37,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         currentIndex: _selectedItem,
         onTap: _navigationBottomNavbar,
         type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.white,
         items: [
           BottomNavigationBarItem(
             icon: Icon(

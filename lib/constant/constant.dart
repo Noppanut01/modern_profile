@@ -3,14 +3,14 @@ import 'package:google_fonts/google_fonts.dart';
 
 // bg styles
 const bgPrimaryColor = Colors.black;
-const bgSecondaryColor = Color.fromARGB(255, 148, 148, 148);
+const bgSecondaryColor = Color.fromARGB(255, 213, 211, 211);
 
 // text styles
 const textPrimaryColor = Colors.white;
 const textSecondaryColor = Colors.black;
 
 // icon styles
-const iconPrimaryColor = Colors.amber;
+const iconPrimaryColor = Colors.blue;
 const iconSecondaryColor = Colors.white;
 
 // font styles

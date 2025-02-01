@@ -3,6 +3,7 @@ import '/constant/constant.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
+  final Color appBarColor;
   final IconData leadIcons;
   final IconData actionIcons;
 
@@ -11,24 +12,25 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     required this.title,
     required this.leadIcons,
     required this.actionIcons,
+    required this.appBarColor,
   });
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.amber,
+      backgroundColor: appBarColor,
       title: Text(
         title,
         style: textTitle,
       ),
       leading: Icon(
         leadIcons,
-        size: 20,
+        size: 25,
       ),
       actions: [
         IconButton(
           onPressed: () {},
-          icon: Icon(actionIcons),
+          icon: Icon(actionIcons, size: 25, color: Colors.black),
         ),
       ],
     );
