@@ -14,7 +14,7 @@ class TabBarItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 40,
-      width: 100,
+      width: 110,
       child: Tab(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
