@@ -31,67 +31,71 @@ class TabNavigationWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.5,
-      child: DefaultTabController(
-        length: tabItems.length,
-        child: Column(
-          children: [
-            // Container(
-            //   decoration: BoxDecoration(
-            //     color: Colors.black,
-            //     borderRadius: BorderRadius.circular(15),
-            //   ),
-            //   padding: const EdgeInsets.symmetric(vertical: 5),
-            //   child: TabBar(
-            //     indicator: BoxDecoration(
-            //       color: const Color(0xFFA88B96),
-            //       borderRadius: BorderRadius.circular(10),
-            //     ),
-            //     indicatorColor: Colors.transparent,
-            //     labelColor: Colors.white,
-            //     unselectedLabelColor: const Color(0xFFA88B96),
-            //     tabs: tabItems,
-            //   ),
-            // ),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(15),
-              ),
-              padding: EdgeInsets.symmetric(vertical: 5),
-              child: Theme(
-                data: Theme.of(context).copyWith(
-                  tabBarTheme: TabBarTheme(
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: SizedBox(
+        height: MediaQuery.of(context).size.height * 0.55,
+        child: DefaultTabController(
+          length: tabItems.length,
+          child: Column(
+            children: [
+              // Container(
+              //   decoration: BoxDecoration(
+              //     color: Colors.black,
+              //     borderRadius: BorderRadius.circular(15),
+              //   ),
+              //   padding: const EdgeInsets.symmetric(vertical: 5),
+              //   child: TabBar(
+              //     indicator: BoxDecoration(
+              //       color: const Color(0xFFA88B96),
+              //       borderRadius: BorderRadius.circular(10),
+              //     ),
+              //     indicatorColor: Colors.transparent,
+              //     labelColor: Colors.white,
+              //     unselectedLabelColor: const Color(0xFFA88B96),
+              //     tabs: tabItems,
+              //   ),
+              // ),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                padding: EdgeInsets.symmetric(vertical: 5),
+                child: Theme(
+                  data: Theme.of(context).copyWith(
+                    tabBarTheme: TabBarTheme(
+                      indicator: BoxDecoration(
+                        color: Color(0xFFA88B96),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      dividerColor:
+                          Colors.transparent, // ✅ REMOVE DEFAULT UNDERLINE
+                    ),
+                  ),
+                  child: TabBar(
                     indicator: BoxDecoration(
                       color: Color(0xFFA88B96),
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    dividerColor:
-                        Colors.transparent, // ✅ REMOVE DEFAULT UNDERLINE
+                    indicatorColor:
+                        Colors.transparent, // 🚨 HIDE UNDERLINE AGAIN
+                    overlayColor: WidgetStateProperty.all(
+                        Colors.transparent), // 🔥 REMOVE CLICK EFFECT
+                    labelColor: Colors.white,
+                    unselectedLabelColor: Color(0xFFA88B96),
+                    tabs: tabItems,
                   ),
                 ),
-                child: TabBar(
-                  indicator: BoxDecoration(
-                    color: Color(0xFFA88B96),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  indicatorColor: Colors.transparent, // 🚨 HIDE UNDERLINE AGAIN
-                  overlayColor: WidgetStateProperty.all(
-                      Colors.transparent), // 🔥 REMOVE CLICK EFFECT
-                  labelColor: Colors.white,
-                  unselectedLabelColor: Color(0xFFA88B96),
-                  tabs: tabItems,
+              ),
+              const SizedBox(height: 20),
+              Expanded(
+                child: TabBarView(
+                  children: tabPages,
                 ),
               ),
-            ),
-            const SizedBox(height: 20),
-            Expanded(
-              child: TabBarView(
-                children: tabPages,
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
